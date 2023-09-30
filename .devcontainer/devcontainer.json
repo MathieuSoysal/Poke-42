@@ -17,7 +17,8 @@
 				"DavidSchuldenfrei.gtest-adapter",
 				"MariusvanWijk-JoppeKoers.codam-norminette-3",
 				"keyhr.42-c-format",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"ms-vscode.cpptools-extension-pack"
 			]
         }
     }
