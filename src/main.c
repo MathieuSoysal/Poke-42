@@ -1,6 +1,22 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int main(void)
+void	ft_putstr(const char *str);
+void	ft_putchar(char c);
+
+int	main(void)
 {
-	printf("yo\n");
+	ft_putstr("yo\n");
+}
+
+void	ft_putstr(const char *str)
+{
+	while (*str)
+	{
+		ft_putchar(*str++);
+	}
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
