@@ -1,11 +1,16 @@
 #include <unistd.h>
 
+#include "temp.h"
+
 void	ft_putstr(const char *str);
 void	ft_putchar(char c);
 
 int	main(void)
 {
-	ft_putstr("yo\n");
+	if (get42() == 42)
+	{
+		ft_putstr("yo\n");
+	}
 }
 
 void	ft_putstr(const char *str)
