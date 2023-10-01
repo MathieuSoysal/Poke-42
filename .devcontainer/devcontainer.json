@@ -18,7 +18,8 @@
 				"MariusvanWijk-JoppeKoers.codam-norminette-3",
 				"keyhr.42-c-format",
 				"ms-vscode.makefile-tools",
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+				"github.vscode-github-actions"
 			]
         }
     }
