@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   output.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 11:55:51 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 12:22:44 by poss             ###   ########.fr       */
+/*   Created: 2023/10/01 12:14:03 by poss              #+#    #+#             */
+/*   Updated: 2023/10/01 12:14:45 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "output.h"
-#include "temp.h"
+#ifndef OUTPUT_H
+# define OUTPUT_H
 
-int	main(void)
-{
-	if (get42() == 42)
-	{
-		ft_putstr("yo\n");
-	}
-}
+void	ft_putstr(const char *str);
+void	ft_putchar(char c);
+
+#endif

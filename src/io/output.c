@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   output.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 11:55:51 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 12:22:44 by poss             ###   ########.fr       */
+/*   Created: 2023/10/01 12:15:01 by poss              #+#    #+#             */
+/*   Updated: 2023/10/01 12:15:33 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "output.h"
-#include "temp.h"
+#include <unistd.h>
 
-int	main(void)
+void	ft_putstr(const char *str)
 {
-	if (get42() == 42)
+	while (*str)
 	{
-		ft_putstr("yo\n");
+		ft_putchar(*str++);
 	}
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
