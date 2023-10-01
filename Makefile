@@ -50,6 +50,7 @@ clean: test_clean
 
 .PHONY: format
 format:
+	bash aux/norme.sh
 
 .PHONY: update
 update:
