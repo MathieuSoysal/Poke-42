@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 
 norm() {
+	echo Formatting $1
     python3 -m c_formatter_42 < $1 > temp
     mv temp $1
 }
