@@ -30,7 +30,7 @@ run: $(TARGET)
 	@./$^
 
 .PHONY: re
-re: clean update
+re: clean build
 
 # Linking
 $(TARGET): $(OBJS)
@@ -50,7 +50,8 @@ clean: test_clean
 
 .PHONY: format
 format:
-	bash aux/norme.sh
+	@echo Formatting
+	@bash aux/norme.sh
 
 .PHONY: check
 check: re

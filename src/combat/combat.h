@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   combat.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 11:55:51 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 13:11:15 by poss             ###   ########.fr       */
+/*   Created: 2023/10/01 12:54:32 by poss              #+#    #+#             */
+/*   Updated: 2023/10/01 13:07:10 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "combat.h"
-#include "io.h"
+#ifndef COMBAT_H
+# define COMBAT_H
 
-int	main(void)
+typedef enum e_action
 {
-	t_action	action;
+	ATTACK,
+	OBJECT,
+	INVALID,
+}			t_action;
 
-	prompt_action();
-	action = get_action();
-	if (action == ATTACK)
-		ft_putstr("pikachu ATTACK\n");
-	else if (action == OBJECT)
-		ft_putstr("eat this pikachu\n");
-	else
-		ft_putstr("invalid action\n");
-}
+void		prompt_action(void);
+t_action	get_action(void);
+
+#endif
