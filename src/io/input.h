@@ -6,13 +6,13 @@
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 12:25:03 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 12:26:27 by poss             ###   ########.fr       */
+/*   Updated: 2023/10/01 13:18:13 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INPUT_H
 # define INPUT_H
 
-int	ft_getc_fd(int fd);
+char	ft_getc_fd(int fd);
 
 #endif

@@ -6,17 +6,17 @@
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 12:26:35 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 12:38:05 by poss             ###   ########.fr       */
+/*   Updated: 2023/10/01 13:17:57 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "input.h"
 #include <unistd.h>
 
-int	ft_getc_fd(int fd)
+char	ft_getc_fd(int fd)
 {
-	int	c;
+	char	c;
 
-	read(fd, &c, 1);
+	read(fd, &c, 3);
 	return (c);
 }
