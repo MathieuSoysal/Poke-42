@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   input.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 11:55:51 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 13:11:15 by poss             ###   ########.fr       */
+/*   Created: 2023/10/01 12:25:03 by poss              #+#    #+#             */
+/*   Updated: 2023/10/01 13:18:13 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "combat.h"
-#include "io.h"
+#ifndef INPUT_H
+# define INPUT_H
 
-int	main(void)
-{
-	t_action	action;
+char	ft_getc_fd(int fd);
 
-	prompt_action();
-	action = get_action();
-	if (action == ATTACK)
-		ft_putstr("pikachu ATTACK\n");
-	else if (action == OBJECT)
-		ft_putstr("eat this pikachu\n");
-	else
-		ft_putstr("invalid action\n");
-}
+#endif

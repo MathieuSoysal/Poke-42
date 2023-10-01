@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   io.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: poss <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 11:55:51 by poss              #+#    #+#             */
-/*   Updated: 2023/10/01 13:11:15 by poss             ###   ########.fr       */
+/*   Created: 2023/10/01 12:44:08 by poss              #+#    #+#             */
+/*   Updated: 2023/10/01 12:45:03 by poss             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "combat.h"
-#include "io.h"
+#ifndef IO_H
+# define IO_H
 
-int	main(void)
-{
-	t_action	action;
+# include "input.h"
+# include "output.h"
 
-	prompt_action();
-	action = get_action();
-	if (action == ATTACK)
-		ft_putstr("pikachu ATTACK\n");
-	else if (action == OBJECT)
-		ft_putstr("eat this pikachu\n");
-	else
-		ft_putstr("invalid action\n");
-}
+# define STDIN 0
+# define STDOUT 1
+# define STDERR 2
+
+# define EOF -1
+
+#endif

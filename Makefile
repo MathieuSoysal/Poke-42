@@ -30,7 +30,7 @@ run: $(TARGET)
 	@./$^
 
 .PHONY: re
-re: clean update
+re: clean build
 
 # Linking
 $(TARGET): $(OBJS)
