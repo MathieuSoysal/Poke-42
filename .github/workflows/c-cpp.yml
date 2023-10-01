@@ -15,12 +15,12 @@ jobs:
     - uses: actions/checkout@v3
     # Install dependencies
     - name: Install dependencies
-      run: apt-get update && apt-get install -y build-essential libgtest-dev
+      run: sudo apt-get update && apt-get install -y build-essential libgtest-dev
     # Install norminette
     - name: Install norminette
-      run: apt-get install -y python3-pip python3-setuptools && python3 -m pip install --upgrade pip setuptools && pip3 install norminette
+      run: sudo apt-get install -y python3-pip python3-setuptools && python3 -m pip install --upgrade pip setuptools && pip3 install norminette
     - name: Install CMake
-      run: RUN apt-get install -y cmake
+      run: sudo apt-get install -y cmake
     - name: make check
       run: make check
     - name: make test
