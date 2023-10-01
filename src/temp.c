@@ -14,5 +14,5 @@
 
 int	get42(void)
 {
-	return (42);
+	return (4);
 }
