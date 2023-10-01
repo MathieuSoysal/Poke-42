@@ -50,6 +50,21 @@ clean: test_clean
 
 .PHONY: format
 format:
+	bash aux/norme.sh
+
+.PHONY: check
+check: re
+	@cppcheck --language=c $(SRCS)
+	@cppcheck --language=c $(HEADERS)
+	@echo
+	@python3 -c 'print("-" * 80)'
+	@echo SAINTE NORMINETTE SOIS CLEMENTE
+	@python3 -c 'print("-" * 80)'
+	@echo
+	@norminette $(SRCS)
+	@echo
+	@norminette $(HEADERS)
+
 
 .PHONY: update
 update:
