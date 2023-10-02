@@ -1,6 +1,6 @@
 # Contributing to Poke-42
 
-Help wanted! We'd love your contributions to Javadoc Publisher. Please review the following guidelines before contributing. Also, feel free to propose changes to these guidelines by updating this file and submitting a pull request.
+Help wanted! We'd love your contributions to POke-42. Please review the following guidelines before contributing. Also, feel free to propose changes to these guidelines by updating this file and submitting a pull request.
 
 - [I have a question...](#questions)
 - [I found a bug...](#bugs)
