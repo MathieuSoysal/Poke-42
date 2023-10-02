@@ -104,6 +104,7 @@ CXX = clang++
 CXXFLAGS  = $(CFLAGS) 
 CXXFLAGS += -std=c++17
 CXXFLAGS += $(TEST_INC_FLAGS)
+CXXFLAGS += -fprofile-arcs -ftest-coverage
 
 GTESTFLAGS = --gtest_color=yes --gtest_print_time=0
 GTESTFLAGS += --gtest_break_on_failure
@@ -111,7 +112,7 @@ GTESTFLAGS += --gtest_break_on_failure
 LDLIBS   = -lgtest -lgtest_main -lpthread
 
 .PHONY: test
-test: clean $(TEST_TARGET)
+test: clean $(TEST_TARGET) coverage
 	./$(TEST_TARGET) $(GTEST_FLAGS)
 
 $(TEST_TARGET): $(TEST_OBJECTS)
@@ -129,6 +130,11 @@ $(TEST_BUILD_DIR)/%.cpp.o: %.cpp
 	@echo Compiling $<
 	@mkdir -p $(dir $@)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+.PHONY: coverage
+coverage:
+	lcov --capture --directory $(TEST_BUILD_DIR) --output-file coverage.info
+	genhtml coverage.info --output-directory coverage
 
 .PHONY: test_clean
 test_clean:
